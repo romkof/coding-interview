@@ -9,9 +9,9 @@ public class BinaryNodeUtils {
 //      / \
 //    (4)  (5)
         return new BinaryNode(1,
+                new BinaryNode(3),
                 new BinaryNode(2,
-                        new BinaryNode(4), new BinaryNode(5)),
-                new BinaryNode(3));
+                        new BinaryNode(5), new BinaryNode(4)));
 
     }
 }
