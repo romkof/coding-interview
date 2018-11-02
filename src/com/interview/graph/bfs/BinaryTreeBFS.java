@@ -31,7 +31,7 @@ public class BinaryTreeBFS {
         Queue<BinaryNode> queue = new LinkedList<>();
         queue.add(root);
         while(!queue.isEmpty()){
-            BinaryNode node = queue.remove();
+            BinaryNode node = queue.poll();
             traversalFun.accept(node.getValue());
             if (node.getLeft() != null) {
                 queue.add(node.getLeft());
