@@ -1,4 +1,4 @@
-package com.interview.graph.dfs;
+package com.interview.graph.bfs;
 
 import com.interview.graph.BinaryNode;
 import com.interview.graph.BinaryNodeUtils;

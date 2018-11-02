@@ -12,7 +12,17 @@ import java.util.function.Consumer;
 import static com.interview.graph.Utils.assertEquals;
 public class BinaryTreeDFS {
 
-    //Left-Root-Right
+    /**
+     * PreOrder Traversal Root-Left-Right
+     *
+     *        (1)
+     *       /   \
+     *     (2)   (3)
+     *     / \
+     *  (4)  (5)
+     *
+     *  (1) -> (2) -> (4) -> (5) -> (3)
+     **/
     public static void preOrderRecursive(BinaryNode root, Consumer<Integer> traversalFun) {
         if (root == null)
             return;
@@ -21,7 +31,6 @@ public class BinaryTreeDFS {
         preOrderRecursive(root.getRight(), traversalFun);
     }
 
-    //Left-Root-Right
     public static void preOrderIterative(BinaryNode root, Consumer<Integer> traversalFun) {
         if (root == null)
             return;
@@ -29,20 +38,27 @@ public class BinaryTreeDFS {
         stack.push(root);
         while (!stack.isEmpty()) {
             BinaryNode node = stack.pop();
-            if (node != null) {
-                traversalFun.accept(node.getValue());
-                if (node.getRight() != null) {
-                    stack.push(node.getRight());
-                }
-                if (node.getLeft() != null) {
-                    stack.push(node.getLeft());
-                }
-
+            traversalFun.accept(node.getValue());
+            if (node.getRight() != null) {
+                stack.push(node.getRight());
+            }
+            if (node.getLeft() != null) {
+                stack.push(node.getLeft());
             }
         }
     }
 
-    //Root-Left-Right
+    /**
+     * InOrder Traversal Left-Root-Right
+     *
+     *        (1)
+     *       /   \
+     *     (2)   (3)
+     *     / \
+     *  (4)  (5)
+     *
+     *  (4) -> (2) -> (5) -> (1) -> (3)
+     **/
     public static void inOrderRecursive(BinaryNode root, Consumer<Integer> traversalFun) {
         if (root == null)
             return;
@@ -51,14 +67,13 @@ public class BinaryTreeDFS {
         inOrderRecursive(root.getRight(), traversalFun);
     }
 
-    //Root-Left-Right
+
     public static void inOrderIterative(BinaryNode root, Consumer<Integer> traversalFun) {
         if (root == null)
             return;
         Stack<BinaryNode> stack = new Stack<>();
         BinaryNode node = root;
         while (node != null || !stack.isEmpty()) {
-
             while (node != null) {
                 stack.push(node);
                 node = node.getLeft();
@@ -69,7 +84,17 @@ public class BinaryTreeDFS {
         }
     }
 
-    //Left-Right-Root
+    /**
+     *  PostOrder Traversal Left-Right-Root
+     *
+     *        (1)
+     *       /   \
+     *     (2)   (3)
+     *     / \
+     *  (4)  (5)
+     *
+     *  (4) -> (5) -> (2) -> (3) -> (1)
+     **/
     public static void postOrderRecursive(BinaryNode node, Consumer<Integer> traversalFun) {
         if (node == null)
             return;
@@ -78,7 +103,6 @@ public class BinaryTreeDFS {
         traversalFun.accept(node.getValue());
     }
 
-    //Left-Right-Root
     public static void postOrderIterative(BinaryNode root, Consumer<Integer> traversalFun) {
         if (root == null)
             return;
@@ -101,7 +125,6 @@ public class BinaryTreeDFS {
         }
     }
 
-    //Left-Right-Root
     public static void postOrderIterativeSecond(BinaryNode root, Consumer<Integer> traversalFun) {
         if (root == null)
             return;
