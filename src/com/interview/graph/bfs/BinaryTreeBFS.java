@@ -13,6 +13,18 @@ import static com.interview.graph.Utils.assertEquals;
 
 public class BinaryTreeBFS {
 
+    /**
+     * Traversal
+     *
+     *        (1)
+     *       /   \
+     *     (2)   (3)
+     *     / \
+     *  (4)  (5)
+     *
+     *  (1) -> (2) -> (3) -> (4) -> (5)
+     **/
+
     public static void traversal(BinaryNode root, Consumer<Integer> traversalFun) {
         if (root == null)
             return;
