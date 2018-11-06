@@ -1,13 +1,16 @@
-package com.interview.graph;
+package com.interview.graph.tree;
 
 public class BinaryNodeUtils {
 
     public static BinaryNode simpleBinaryTree() {
-//         (1)
-//        /   \
-//      (2)   (3)
-//      / \
-//    (4)  (5)
+/**
+ *         (1)
+ *        /   \
+ *      (2)   (3)
+ *      / \
+ *    (4)  (5)
+ *
+ **/
         return new BinaryNode(1,
                 new BinaryNode(3),
                 new BinaryNode(2,

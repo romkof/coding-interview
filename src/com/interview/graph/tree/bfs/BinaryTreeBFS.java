@@ -1,7 +1,7 @@
-package com.interview.graph.bfs;
+package com.interview.graph.tree.bfs;
 
-import com.interview.graph.BinaryNode;
-import com.interview.graph.BinaryNodeUtils;
+import com.interview.graph.tree.BinaryNode;
+import com.interview.graph.tree.BinaryNodeUtils;
 
 import java.util.Arrays;
 import java.util.LinkedList;
