@@ -13,15 +13,16 @@ import static com.interview.graph.Utils.assertEquals;
 public class BinaryTreeDFS {
 
     /**
-     * PreOrder Traversal Root-Left-Right
-     *
-     *        (1)
-     *       /   \
-     *     (2)   (3)
-     *     / \
-     *  (4)  (5)
-     *
-     *  (1) -> (2) -> (4) -> (5) -> (3)
+      PreOrder Traversal Root-Left-Right
+
+             (1)
+            /   \
+          (2)   (3)
+          / \
+       (4)  (5)
+
+      (1) -> (2) -> (4) -> (5) -> (3)
+
      **/
     public static void preOrderRecursive(BinaryNode root, Consumer<Integer> traversalFun) {
         if (root == null)
@@ -49,15 +50,16 @@ public class BinaryTreeDFS {
     }
 
     /**
-     * InOrder Traversal Left-Root-Right
-     *
-     *        (1)
-     *       /   \
-     *     (2)   (3)
-     *     / \
-     *  (4)  (5)
-     *
-     *  (4) -> (2) -> (5) -> (1) -> (3)
+      InOrder Traversal Left-Root-Right
+
+             (1)
+            /   \
+          (2)   (3)
+          / \
+       (4)  (5)
+
+       (4) -> (2) -> (5) -> (1) -> (3)
+
      **/
     public static void inOrderRecursive(BinaryNode root, Consumer<Integer> traversalFun) {
         if (root == null)
@@ -85,15 +87,16 @@ public class BinaryTreeDFS {
     }
 
     /**
-     *  PostOrder Traversal Left-Right-Root
-     *
-     *        (1)
-     *       /   \
-     *     (2)   (3)
-     *     / \
-     *  (4)  (5)
-     *
-     *  (4) -> (5) -> (2) -> (3) -> (1)
+       PostOrder Traversal Left-Right-Root
+
+             (1)
+            /   \
+          (2)   (3)
+          / \
+       (4)  (5)
+
+       (4) -> (5) -> (2) -> (3) -> (1)
+
      **/
     public static void postOrderRecursive(BinaryNode node, Consumer<Integer> traversalFun) {
         if (node == null)
@@ -104,6 +107,8 @@ public class BinaryTreeDFS {
     }
     
     /**
+     *
+     *
      *    +------------+--------+---------+---------+---------+---------+--------+
      *    |Iteration   |1       |1        |2        |3        |4        |5       |
      *    +------------+--------+---------+---------+---------+---------+--------+
@@ -156,6 +161,16 @@ public class BinaryTreeDFS {
     }
 
     /**
+      PostOrder Traversal Left-Right-Root
+
+            (1)
+            / \
+         (2)  (3)
+         / \
+       (4)  (5)
+
+      (4) -> (5) -> (2) -> (3) -> (1)
+
      ╔═══════════╤═════════════════╤══════════════╤══════════════╤══════════════╤══════════════╤══════════════╗
      ║ Iteration │        0        │      1       │      2       │      3       │      4       │      5       ║
      ╠═══════════╪═════════════════╪══════════════╪══════════════╪══════════════╪══════════════╪══════════════╣
