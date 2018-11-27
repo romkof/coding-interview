@@ -1,4 +1,4 @@
-package com.interview.graph.adjacency.matrix;
+package interview.graph.adjacency.list;
 
 public class GraphUtils {
     /**

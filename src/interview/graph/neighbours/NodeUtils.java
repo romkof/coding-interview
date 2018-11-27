@@ -1,4 +1,4 @@
-package com.interview.graph.neighbours;
+package interview.graph.neighbours;
 
 
 public class NodeUtils {

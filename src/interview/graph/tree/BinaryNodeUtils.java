@@ -1,4 +1,4 @@
-package com.interview.graph.tree;
+package interview.graph.tree;
 
 public class BinaryNodeUtils {
 

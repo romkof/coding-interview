@@ -1,4 +1,4 @@
-package com.interview.graph;
+package interview.graph;
 
 public class Utils {
     public static void assertEquals(Object actual, Object expected) {

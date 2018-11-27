@@ -1,4 +1,4 @@
-package com.interview.graph.neighbours;
+package interview.graph.neighbours;
 
 import java.util.ArrayList;
 import java.util.List;

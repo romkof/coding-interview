@@ -1,7 +1,7 @@
-package com.interview.graph.tree.bfs;
+package interview.graph.tree.bfs;
 
-import com.interview.graph.tree.BinaryNode;
-import com.interview.graph.tree.BinaryNodeUtils;
+import interview.graph.tree.BinaryNode;
+import interview.graph.tree.BinaryNodeUtils;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.function.Consumer;
 
-import static com.interview.graph.Utils.assertEquals;
+import static interview.graph.Utils.assertEquals;
 
 public class BinaryTreeBFS {
 
